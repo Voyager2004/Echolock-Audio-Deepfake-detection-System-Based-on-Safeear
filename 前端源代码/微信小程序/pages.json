@@ -1,0 +1,56 @@
+{
+	"pages": [{
+		"path": "pages/index/index",
+		"style": {
+			"navigationBarTitleText": "音频伪造检测工具"
+		}
+	},
+  {
+    "path": "pages/record/record",
+    	"style": {
+    		"navigationBarTitleText": "录音机"
+    	}
+  },
+  {
+    "path": "pages/history/history",
+    	"style": {
+    		"navigationBarTitleText": "历史记录"
+    	}
+  }
+  ],
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "blue",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "iconPath": "/static/shouye-zhihui.png",
+      "selectedIconPath": "/static/shouye-zhihuia.png",
+      "text": "首页"
+    },
+    {
+      "pagePath": "pages/record/record",
+      "iconPath": "/static/yingyinqu.png",
+      "selectedIconPath": "/static/yingyinqua.png",
+      "text": "录音"
+    },
+    {
+      "pagePath": "pages/history/history",
+      "iconPath": "/static/fenlei.png",
+      "selectedIconPath": "/static/fenleiT.png",
+      "text": "历史"
+    }
+    ]
+  },
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "音频伪造检测工具",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8",
+		"app-plus": {
+			"background": "#efeff4"
+		}
+	},
+  "canvas": true
+}

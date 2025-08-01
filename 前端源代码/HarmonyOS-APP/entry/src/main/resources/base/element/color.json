@@ -1,0 +1,32 @@
+{
+  "color": [
+    {
+      "name": "start_window_background",
+      "value": "#FFFFFF"
+    },
+    {
+      "name": "SpaceGray",
+      "value": "#424242"
+    },
+    {
+      "name": "Silver",
+      "value": "#F0F0F0"
+    },
+    {
+      "name": "Gold",
+      "value": "#D4AF37"
+    },
+    {
+      "name": "MidnightGreen",
+      "value": "#485137"
+    },
+    {
+      "name": "Red",
+      "value": "#FF0000"
+    },
+    {
+      "name": "LightGray",
+      "value": "#A9A9A9"
+    }
+  ]
+}

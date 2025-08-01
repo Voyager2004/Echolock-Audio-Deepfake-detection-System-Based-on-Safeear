@@ -1,0 +1,57 @@
+/* 水平间距 */
+/* 水平间距 */
+.container.data-v-b2d018fa {
+  padding: 20rpx;
+  height: 100vh;
+  background-color: #f5f5f5;
+}
+.header.data-v-b2d018fa {
+  padding: 20rpx;
+  margin-bottom: 20rpx;
+}
+.header .title.data-v-b2d018fa {
+  font-size: 40rpx;
+  font-weight: bold;
+  display: block;
+}
+.header .subtitle.data-v-b2d018fa {
+  font-size: 28rpx;
+  color: #666;
+}
+.history-list.data-v-b2d018fa {
+  height: calc(100vh - 120rpx);
+}
+.history-item.data-v-b2d018fa {
+  background: #fff;
+  border-radius: 12rpx;
+  padding: 20rpx;
+  margin-bottom: 20rpx;
+  border-left: 8rpx solid;
+}
+.history-item .item-header.data-v-b2d018fa {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10rpx;
+}
+.history-item .item-header .file-name.data-v-b2d018fa {
+  font-size: 32rpx;
+  max-width: 70%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.history-item .item-header .result.data-v-b2d018fa {
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.history-item .item-footer.data-v-b2d018fa {
+  display: flex;
+  justify-content: space-between;
+  font-size: 24rpx;
+  color: #999;
+}
+.chart.data-v-b2d018fa {
+  width: 100%;
+  height: 400rpx;
+  padding: 0;
+}

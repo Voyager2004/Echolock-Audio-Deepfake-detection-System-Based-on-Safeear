@@ -1,0 +1,83 @@
+
+.container.data-v-3df48dc2 {
+  width: 30px;
+  height: 30px;
+  position: relative;
+}
+.container.loading2.data-v-3df48dc2 {
+  transform: rotate(10deg);
+}
+.container.loading2 .shape.data-v-3df48dc2 {
+  border-radius: 5px;
+}
+.container.loading2.data-v-3df48dc2{
+  animation: rotation 1s infinite;
+}
+.container .shape.data-v-3df48dc2 {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 1px;
+}
+.container .shape.shape1.data-v-3df48dc2 {
+  left: 0;
+  background-color: #1890FF;
+}
+.container .shape.shape2.data-v-3df48dc2 {
+  right: 0;
+  background-color: #91CB74;
+}
+.container .shape.shape3.data-v-3df48dc2 {
+  bottom: 0;
+  background-color: #FAC858;
+}
+.container .shape.shape4.data-v-3df48dc2 {
+  bottom: 0;
+  right: 0;
+  background-color: #EE6666;
+}
+.loading2 .shape1.data-v-3df48dc2 {
+  animation: animation2shape1-3df48dc2 0.5s ease 0s infinite alternate;
+}
+@keyframes animation2shape1-3df48dc2 {
+from {
+    transform: translate(0, 0);
+}
+to {
+    transform: translate(20px, 20px);
+}
+}
+.loading2 .shape2.data-v-3df48dc2 {
+  animation: animation2shape2-3df48dc2 0.5s ease 0s infinite alternate;
+}
+@keyframes animation2shape2-3df48dc2 {
+from {
+    transform: translate(0, 0);
+}
+to {
+    transform: translate(-20px, 20px);
+}
+}
+.loading2 .shape3.data-v-3df48dc2 {
+  animation: animation2shape3-3df48dc2 0.5s ease 0s infinite alternate;
+}
+@keyframes animation2shape3-3df48dc2 {
+from {
+    transform: translate(0, 0);
+}
+to {
+    transform: translate(20px, -20px);
+}
+}
+.loading2 .shape4.data-v-3df48dc2 {
+  animation: animation2shape4-3df48dc2 0.5s ease 0s infinite alternate;
+}
+@keyframes animation2shape4-3df48dc2 {
+from {
+    transform: translate(0, 0);
+}
+to {
+    transform: translate(-20px, -20px);
+}
+}
+

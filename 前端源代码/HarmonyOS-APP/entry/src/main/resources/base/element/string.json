@@ -1,0 +1,24 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "module description"
+    },
+    {
+      "name": "EntryAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "EntryAbility_label",
+      "value": "音频伪造检测"
+    },
+    {
+      "name": "reason_record",
+      "value": "需要访问麦克风才能使用录音功能"
+    },
+    {
+      "name": "record_reason",
+      "value": "录音需要权限"
+    }
+  ]
+}

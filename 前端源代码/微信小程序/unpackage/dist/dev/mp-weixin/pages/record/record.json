@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "录音机",
+  "usingComponents": {
+    "uni-icons": "../../uni_modules/uni-icons/components/uni-icons/uni-icons",
+    "uni-steps": "../../uni_modules/uni-steps/components/uni-steps/uni-steps"
+  }
+}

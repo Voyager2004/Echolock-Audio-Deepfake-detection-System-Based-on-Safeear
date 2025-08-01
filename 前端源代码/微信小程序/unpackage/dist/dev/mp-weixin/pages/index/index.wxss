@@ -1,0 +1,50 @@
+
+.container.data-v-1cf27b2a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    padding: 30rpx;
+}
+.progressBox.data-v-1cf27b2a {
+    position: relative;
+    width: 300rpx;
+    height: 300rpx;
+    margin: 0 auto;
+    margin: 30rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.description.data-v-1cf27b2a {
+    font-size: 40rpx;
+    margin: 30rpx;
+}
+.file-name.data-v-1cf27b2a {
+    font-size: 28rpx;
+    margin: 30rpx;
+}
+button.data-v-1cf27b2a {
+    width: 60%;
+    height: 100rpx;
+    line-height: 100rpx;
+    border-radius: 50rpx;
+    font-size: 36rpx;
+    margin-top: 30rpx;
+}
+.upload-btn.data-v-1cf27b2a {
+    background-color: #007AFF;
+    color: white;
+}
+.upload-btn[disabled].data-v-1cf27b2a {
+    background-color: #CCCCCC;
+}
+.record-btn.data-v-1cf27b2a {
+    background-color: #34C759;
+    color: white;
+    margin-top: 100rpx;
+}
+.steps.data-v-1cf27b2a {
+    margin-top: 30rpx;
+    width: 60%;
+}

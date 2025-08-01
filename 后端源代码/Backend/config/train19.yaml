@@ -1,0 +1,87 @@
+datamodule:
+  _target_: safeear.datas.asvspoof19.DataModule
+  batch_size: 1
+  num_workers: 8
+  pin_memory: true
+  DataClass_dict:
+    _target_: safeear.datas.asvspoof19.DataClass
+    train_path: ["datas/ASVSpoof2019/train.tsv", "datas/ASVSpoof2019/ASVspoof2019.LA.cm.train.trn.txt", "datas/datasets/ASVSpoof2019_Hubert_L9/ASVspoof2019_LA_train/flac"]
+    val_path: ["datas/ASVSpoof2019/dev.tsv", "datas/ASVSpoof2019/ASVspoof2019.LA.cm.dev.trl.txt", "datas/datasets/ASVSpoof2019_Hubert_L9/ASVspoof2019_LA_dev/flac"]
+    test_path: ["datas/ASVSpoof2019/eval.tsv", "datas/ASVSpoof2019/ASVspoof2019.LA.cm.eval.trl.txt", "datas/datasets/ASVSpoof2019_Hubert_L9/ASVspoof2019_LA_eval/flac"]
+    max_len: 64600
+
+decouple_model:
+  _target_: safeear.models.decouple.SpeechTokenizer
+  n_filters: 64
+  strides: [8,5,4,2]
+  dimension: 1024
+  semantic_dimension: 768
+  bidirectional: true
+  dilation_base: 2
+  residual_kernel_size: 3
+  n_residual_layers: 1
+  lstm_layers: 2
+  activation: ELU
+  codebook_size: 1024
+  n_q: 8
+  sample_rate: 16000
+
+speechtokenizer_path: model_zoos/SpeechTokenizer.pt #解耦模型路径
+
+detect_model:
+  _target_: safeear.models.safeear.SafeEar1s
+  front:
+    _target_: safeear.models.safeear.SE_Rawformer_front
+  embedding_dim: 1024 
+  dropout_rate: 0.1 
+  attention_dropout: 0.1 
+  stochastic_depth: 0.1 
+  num_layers: 2
+  num_heads: 8 
+  num_classes: 2 
+  positional_embedding: 'sine' 
+  mlp_ratio: 1.0
+
+system:
+  _target_: safeear.trainer.safeear_trainer.SafeEarTrainer
+  lr_raw_former: 3.0e-4
+  save_score_path: ${exp.dir}/${exp.name}
+
+exp: 
+  dir: Exps/ # 修改
+  name: ASVspoof19 # 修改
+
+early_stopping:
+  _target_: pytorch_lightning.callbacks.EarlyStopping
+  monitor: val_eer # 修改
+  mode: min
+  patience: 40 #如果连续40个epoch没有提升，则停止训练
+  verbose: true
+
+checkpoint:
+  _target_: pytorch_lightning.callbacks.ModelCheckpoint
+  dirpath: ${exp.dir}/${exp.name}/checkpoints
+  monitor: val_eer # 修改
+  mode: min
+  verbose: true
+  save_top_k: 1 # 仅保存一个最好的模型，可修改
+  save_last: true # 保存最后一个模型
+  filename: '{epoch}-{val_eer:.4f}' # 修改
+
+logger:
+  _target_: pytorch_lightning.loggers.WandbLogger
+  name: ${exp.name}
+  save_dir: ${exp.dir}/${exp.name}/logs
+  offline: true
+  project: SafeEar
+
+trainer:
+  _target_: pytorch_lightning.Trainer
+  devices: [0]
+  max_epochs: 50 #最大训练轮数
+  sync_batchnorm: true
+  default_root_dir: ${exp.dir}/${exp.name}/
+  accelerator: gpu
+  limit_train_batches: 1.0
+  limit_val_batches: 1.0
+  fast_dev_run: false

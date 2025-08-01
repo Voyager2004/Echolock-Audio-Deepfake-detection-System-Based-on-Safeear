@@ -1,0 +1,131 @@
+/* 水平间距 */
+/* 水平间距 */
+.container.data-v-ef6850c5 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 40rpx;
+}
+.title.data-v-ef6850c5 {
+  font-size: 48rpx;
+  color: #2c3e50;
+  letter-spacing: 4rpx;
+  margin: 60rpx 0;
+  font-weight: 500;
+}
+.time-display.data-v-ef6850c5 {
+  display: flex;
+  align-items: baseline;
+  margin: 40rpx 0;
+}
+.time-display .time.data-v-ef6850c5 {
+  font-size: 80rpx;
+  color: #2c3e50;
+  text-shadow: 2rpx 2rpx 4rpx rgba(0, 0, 0, 0.1);
+}
+.time-display .colon.data-v-ef6850c5 {
+  font-size: 60rpx;
+  margin: 0 10rpx;
+  color: #666;
+}
+.visualizer.data-v-ef6850c5 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 150rpx;
+  margin: 60rpx 0;
+  gap: 8rpx;
+}
+.visualizer .bar.data-v-ef6850c5 {
+  width: 16rpx;
+  background: #409EFF;
+  border-radius: 8rpx;
+  transition: height 0.2s ease;
+}
+.controls.data-v-ef6850c5 {
+  display: flex;
+  align-items: center;
+  gap: 80rpx;
+  margin-top: 60rpx;
+}
+.main-btn.data-v-ef6850c5 {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 50%;
+  background: #ff4444;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 8rpx 20rpx rgba(255, 68, 68, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+}
+.main-btn.recording.data-v-ef6850c5 {
+  animation: pulse-ef6850c5 1.5s infinite;
+}
+.main-btn.recording .inner-circle.data-v-ef6850c5 {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 12rpx;
+}
+.main-btn.paused.data-v-ef6850c5 {
+  background: #ffa500;
+}
+.main-btn.paused .inner-circle.data-v-ef6850c5 {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 30rpx 0 30rpx 50rpx;
+  border-color: transparent transparent transparent #fff;
+}
+.inner-circle.data-v-ef6850c5 {
+  width: 80rpx;
+  height: 80rpx;
+  background: #fff;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+.control-btn.data-v-ef6850c5 {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+.control-btn.disabled.data-v-ef6850c5 {
+  opacity: 0.5;
+  filter: grayscale(1);
+}
+.control-btn .icon.data-v-ef6850c5 {
+  width: 50rpx;
+  height: 50rpx;
+}
+.status-text.data-v-ef6850c5 {
+  margin: 20rpx;
+  color: #666;
+  font-size: 28rpx;
+}
+@keyframes pulse-ef6850c5 {
+0% {
+    transform: scale(1);
+}
+50% {
+    transform: scale(1.05);
+}
+100% {
+    transform: scale(1);
+}
+}
+.steps.data-v-ef6850c5 {
+  margin-top: 30rpx;
+  width: 60%;
+}
+.action-btn.data-v-ef6850c5 {
+  border-radius: 50rpx;
+}
