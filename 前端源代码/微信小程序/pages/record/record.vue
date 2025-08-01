@@ -238,11 +238,11 @@
       title: '上传中...',
       mask: true
     })
-
+  
     try {
       console.log(tempFilePath.value)
       const res = await uni.uploadFile({
-        url: 'https://whusafeear.top:3006/common/upload', // 替换为实际接口
+        url: process.env.VUE_APP_API_BASE_URL + '/common/upload', // 使用环境变量替代硬编码URL
         filePath: tempFilePath.value,
         name: 'file',
         formData: {

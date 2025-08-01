@@ -1,0 +1,57 @@
+# 环境变量文件
+.env
+.env.local
+.env.*.local
+
+# TLS证书文件
+*.key
+*.crt
+*.pem
+*.p12
+*.pfx
+certs/
+
+# 敏感配置文件
+config/secrets.yaml
+config/production.yaml
+
+# 上传文件
+datas/
+uploads/
+temp/
+
+# 模型权重文件
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+models/
+checkpoints/
+
+# 日志文件
+*.log
+logs/
+
+# 缓存文件
+*.csv
+cache/
+
+# 依赖目录
+node_modules/
+__pycache__/
+*.pyc
+
+# IDE文件
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 压缩包
+*.zip
+*.rar
+*.tar.gz
